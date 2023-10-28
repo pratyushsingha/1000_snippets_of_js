@@ -224,3 +224,66 @@ console.log(addWithSurcharge(10, 30))
 
 
 
+
+function isArray(input1, input2) {
+  return [input1, input2]
+}
+console.log(isArray(1, 2))
+
+
+function getFirstElement(input) {
+  return input[0]
+}
+console.log(getFirstElement([1, 2, 3]))
+
+function setFirstElement(input, value) {
+  let newArr = input.unshift(value)
+  return input
+}
+console.log(setFirstElement([1, 2, 3], 0))
+
+function getLastElement(input) {
+  return input[input.length - 1];
+}
+console.log(getLastElement([1, 2, 3]))
+
+function sort(input) {
+  let sortedArr = [...input].sort();
+
+  return sortedArr;
+}
+
+console.log(sort([2, 3, 1]))
+
+function rotate(input) {
+  let first = input.shift();
+  let push = input.push(first);
+  return input;
+}
+console.log(rotate([1, 2, 3]))
+
+function halve(arr) {
+  let halfLength = Math.ceil(arr.length / 2);
+  return arr.slice(0, halfLength);
+}
+console.log(halve([1, 2, 3, 4, 5]))
+
+function list(arr) {
+  let copy = arr.slice(0, arr.length - 1);
+  let lElm = arr[arr.length - 1];
+  if (arr.length > 2) {
+    return copy.join(', ') + " and " + lElm
+  } else if (arr.length === 2) {
+    return arr.join(' and ')
+  } else if (arr.length === 1) {
+    return arr[0]
+  }
+  else if (arr.length === 0) {
+    return ''
+  }
+}
+
+console.log(list([]));
+
+
+
