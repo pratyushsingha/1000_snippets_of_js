@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // let data = [12, 45, 49, 5, 47, 42, 45];
+      // let newEl = 70;
+      // let pos = 4;
+      // for (let index = data.length; index >= 0; index--) {
+      //   console.log(data[index]);
+      //   if (index >= pos) {
+      //     data[index + 1] = data[index];
+      //     if (index == pos) {
+      //       data[index] = newEl;
+      //     }
+      //   }
+      //   console.log(data);
+      // }
+
+      let data = [12, 45, 49, 5, 47, 42, 45];
+      console.log(data);
+
+      function insertEl() {
+        let pos = document.getElementById("position").value;
+        let el = document.getElementById("element").value;
+        el = parseInt(el);
+        // for (let i = data.length; i >= 0; i--) {
+        //   if (i >= pos) {
+        //     data[i + 1] = data[i];
+        //     if (i == pos) {
+        //       data[i] = el;
+        //     }
+        //   }
+        // }
+        data.splice(pos, 0, el);
+      }
+      //   for (let i = 0; i < data.length; i++) {
+      //     document.write(`${data[i]} `);
+      //   }
+      console.log(data);
+    </script>
+  </head>
+  <body>
+    <input type="text" name="" id="position" placeholder="position" />
+    <input type="text" name="" id="element" placeholder="new element" />
+    <button onclick="insertEl()">add element</button>
+  </body>
+</html>
