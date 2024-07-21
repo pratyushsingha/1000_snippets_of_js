@@ -32,6 +32,8 @@
 // console.log(myColor.join(" "))
 // console.log(myColor.join("+"))
 
+let arr = ["blue","yellow"];
+
 
 const dash = (arr) => {
     const resp ={...arr.join("-")}
